@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
     return auth()->check() // Revisa si el usuario ya está autenticado/ loggeado
@@ -22,3 +24,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
